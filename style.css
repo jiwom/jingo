@@ -1,0 +1,6 @@
+#results {
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: auto;
+    max-height: 150px;
+}
