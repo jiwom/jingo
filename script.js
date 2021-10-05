@@ -18,6 +18,7 @@ $(function () {
             runDraw = true;
         }
     });
+
     $('.btn-danger').click(function () {
         runDraw = false;
     });
@@ -27,7 +28,7 @@ function drawNum() {
     let randomCarNum = cardNumIn[Math.floor(Math.random() * cardNumIn.length)];
 
     if (randomCarNum === undefined) {
-        alert('No More Numbers to Read!')
+        alert('No More Numbers to Read!');
         return false;
     }
 

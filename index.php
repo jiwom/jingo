@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-4 text-center">
             <div>
-                <h1 id="ball">BINGO!</h1>
+                <h1 id="ball">BINGO JINGO!</h1>
             </div>
             <div>
                 <button class="btn btn-primary btn-lg"><i class="fas fa-play"></i></button>
