@@ -26,12 +26,12 @@
                 <button class="btn btn-danger btn-lg"><i class="fas fa-stop"></i></button>
             </div>
             <div id="results" class="mt-5 p-4">
-                <>No results.
+                
             </div>
         </div>
         <div class="col-8">
             <table class="table table-bordered text-center mr-5">
-                <thead class="thead-dark">
+                <thead class="thead-light">
                 <tr>
                     <th>B</th>
                     <th>I</th>
