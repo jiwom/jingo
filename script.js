@@ -1,7 +1,7 @@
-var runDraw = false;
-var cardNumIn = [];
-var cardNumOut = [];
-for (var i = 1; i <= 75; i++) {
+let runDraw = false;
+let cardNumIn = [];
+let cardNumOut = [];
+for (let i = 1; i <= 75; i++) {
     cardNumIn.push(i);
 }
 
@@ -24,17 +24,22 @@ $(function () {
 });
 
 function drawNum() {
-    var randomCarNum = cardNumIn[Math.floor(Math.random() * cardNumIn.length)];
+    let randomCarNum = cardNumIn[Math.floor(Math.random() * cardNumIn.length)];
+
+    if (randomCarNum === undefined) {
+        alert('No More Numbers to Read!')
+        return false;
+    }
+
     cardNumOut.push(randomCarNum);
     removeNum(randomCarNum);
     $('#ball').text(randomCarNum);
     $('#card-num-' + randomCarNum).addClass('bg-info');
-
     $('#results').append('<button class="btn btn-light btn-lg ">' + randomCarNum + '</button> ');
     $('#results button:last-child').focus();
 }
 
 function removeNum(num) {
-    var index = cardNumIn.indexOf(num);
+    let index = cardNumIn.indexOf(num);
     if (index !== -1) cardNumIn.splice(index, 1);
 }
