@@ -33,7 +33,7 @@
             <table class="table table-bordered text-center mr-5">
                 <thead class="thead-light">
                 <tr>
-                    <th>B</th>
+                    <th>J</th>
                     <th>I</th>
                     <th>N</th>
                     <th>G</th>
