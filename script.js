@@ -22,6 +22,30 @@ $(function () {
     $('.btn-danger').click(function () {
         runDraw = false;
     });
+
+    $('.btn-secondary').click(function () {
+        // Reset the game state
+        runDraw = false;
+        cardNumIn = [];
+        cardNumOut = [];
+
+        // Repopulate the cardNumIn array with numbers 1-75
+        for (let i = 1; i <= 75; i++) {
+            cardNumIn.push(i);
+        }
+
+        // Clear the ball display
+        $('#ball').text('');
+
+        // Reset all number cards to original state
+        for (let i = 1; i <= 75; i++) {
+            $('#card-num-' + i).removeClass('bg-info').removeClass('text-white');
+        }
+
+        // Clear the results display
+        $('#results').empty();
+    });
+    
 });
 
 function drawNum() {
