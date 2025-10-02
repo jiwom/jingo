@@ -39,13 +39,32 @@
                             <th>O</th>
                         </tr>
                         </thead>
-                        <?php $number = 1; ?>
-                        <?php for ($rows = 1; $rows <= 15; $rows++): ?>
-                            <?php $counter = 0; ?>
+                        <?php
+                        // Define BINGO number ranges for each column
+                        $ranges = [
+                            'J' => [1, 15],   // J: 1-15
+                            'I' => [16, 30],  // I: 16-30
+                            'N' => [31, 45],  // N: 31-45
+                            'G' => [46, 60],  // G: 46-60
+                            'O' => [61, 75]   // O: 61-75
+                        ];
+
+                        // Generate unique random numbers for each column
+                        $columnNumbers = [];
+                        $columnKeys = array_keys($ranges);
+
+                        for ($col = 0; $col < 5; $col++) {
+                            $min = $ranges[$columnKeys[$col]][0];
+                            $max = $ranges[$columnKeys[$col]][1];
+                            $columnNumbers[$col] = range($min, $max);
+                            shuffle($columnNumbers[$col]);
+                        }
+                        ?>
+                        <?php for ($rows = 0; $rows < 15; $rows++): ?>
                             <tr>
                                 <?php for ($col = 0; $col < 5; $col++): ?>
-                                    <td id="card-num-<?php echo $rows + $counter; ?>"><?php echo $rows + $counter; ?></td>
-                                    <?php $counter += 15; ?>
+                                    <?php $number = $columnNumbers[$col][$rows]; ?>
+                                    <td id="card-num-<?php echo $number; ?>"><?php echo $number; ?></td>
                                 <?php endfor; ?>
                             </tr>
                         <?php endfor; ?>
