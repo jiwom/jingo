@@ -36,7 +36,7 @@ function drawNum() {
     removeNum(randomCarNum);
     $('#ball').text(randomCarNum);
     $('#card-num-' + randomCarNum).addClass('bg-info').addClass('text-white');
-    $('#results').append('<button class="btn btn-light btn-lg ">' + randomCarNum + '</button> ');
+    $('#results').append('<button class="btn btn-light btn-lg d-flex justify-content-center align-items-center result-wh mr-2 mb-2 shadow-sm">' + randomCarNum + '</button> ');
     $('#results button:last-child').focus();
 }
 
