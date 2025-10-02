@@ -17,7 +17,7 @@
     <body>
         <div class="container mt-5">
             <div class="row">
-                <div class="col-4 text-center">
+                <div class="col-lg-4 col-12 text-center">
                      <div class="logo-wrap">
                         <svg class="w-100" xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 711.37 329.87">
                             <defs>
@@ -161,7 +161,7 @@
                     </div>
                     <div id="results" class="mt-4 p-3"></div>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-12">
                     <table class="table table-bordered text-center mr-5">
                         <thead class="thead-light">
                         <tr>
