@@ -1,6 +1,8 @@
 #results {
-    overflow-x: auto;
-    white-space: nowrap;
-    overflow-y: auto;
-    max-height: 155px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.result-wh{
+    width: 57px;
+    height: 48px;
 }
