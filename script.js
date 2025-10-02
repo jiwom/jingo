@@ -62,7 +62,12 @@ function drawNum() {
     let randomCarNum = cardNumIn[Math.floor(Math.random() * cardNumIn.length)];
 
     if (randomCarNum === undefined) {
-        alert('No More Numbers to Read!');
+        Swal.fire({
+            title: 'Game Complete!',
+            text: 'No More Numbers to Read!',
+            icon: 'info',
+            confirmButtonText: 'OK'
+        });
         return false;
     }
 
