@@ -26,7 +26,7 @@
                         <button class="btn btn-danger btn-lg"><i class="fas fa-stop"></i> Stop</button>
                         <button class="btn btn-secondary btn-lg"><i class="fas fa-sync"></i> Refresh</button>
                     </div>
-                    <div id="results" class="mt-4 p-4"></div>
+                    <div id="results" class="mt-4 p-3"></div>
                 </div>
                 <div class="col-8">
                     <table class="table table-bordered text-center mr-5">
