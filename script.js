@@ -5,6 +5,16 @@ for (let i = 1; i <= 75; i++) {
     cardNumIn.push(i);
 }
 
+// Function to get the column letter for a given number
+function getColumnLetter(num) {
+    if (num >= 1 && num <= 15) return 'J';
+    if (num >= 16 && num <= 30) return 'I';
+    if (num >= 31 && num <= 45) return 'N';
+    if (num >= 46 && num <= 60) return 'G';
+    if (num >= 61 && num <= 75) return 'O';
+    return '';
+}
+
 $(function () {
     window.setInterval(function () {
         if (runDraw) {
@@ -52,15 +62,25 @@ function drawNum() {
     let randomCarNum = cardNumIn[Math.floor(Math.random() * cardNumIn.length)];
 
     if (randomCarNum === undefined) {
-        alert('No More Numbers to Read!');
+        Swal.fire({
+            title: 'Game Complete!',
+            text: 'No More Numbers to Read!',
+            icon: 'info',
+            confirmButtonText: 'OK'
+        });
         return false;
     }
 
     cardNumOut.push(randomCarNum);
     removeNum(randomCarNum);
-    $('#ball').text(randomCarNum);
+
+    // Get the column letter and format the display
+    let columnLetter = getColumnLetter(randomCarNum);
+    let displayText = columnLetter + ' - ' + randomCarNum;
+
+    $('#ball').text(displayText);
     $('#card-num-' + randomCarNum).addClass('bg-info').addClass('text-white');
-    $('#results').append('<button class="btn btn-light btn-lg d-flex justify-content-center align-items-center result-wh mr-2 mb-2 shadow-sm">' + randomCarNum + '</button> ');
+    $('#results').append('<button class="btn btn-light btn-lg d-flex justify-content-center align-items-center result-wh mr-2 mb-2 shadow-sm">' + displayText + '</button> ');
     $('#results button:last-child').focus();
 }
 
