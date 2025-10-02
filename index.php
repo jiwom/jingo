@@ -25,7 +25,7 @@
                         <button class="btn btn-primary btn-lg"><i class="fas fa-play"></i></button>
                         <button class="btn btn-danger btn-lg"><i class="fas fa-stop"></i></button>
                     </div>
-                    <div id="results" class="mt-5 p-4"></div>
+                    <div id="results" class="mt-4 p-4"></div>
                 </div>
                 <div class="col-8">
                     <table class="table table-bordered text-center mr-5">
